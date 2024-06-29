@@ -13,5 +13,9 @@ struct HomeP_XR_Mini_VisionApp: App {
         WindowGroup {
             ContentView()
         }
+        
+        ImmersiveSpace(id: "ImmersiveSpace") {
+            ImmersiveView()
+        }
     }
 }
