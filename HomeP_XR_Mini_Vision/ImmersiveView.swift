@@ -74,7 +74,7 @@ struct ImmersiveView: View {
             Attachment(id: "photoAlbum") {
                 ImagePickerView(viewModel: ImagePickerViewModel())
                     .background(.clear)
-                    .frame(maxWidth: 310, maxHeight: 500)
+                    .frame(maxWidth: 910, maxHeight: 500)
             }
             
             Attachment(id: "calendarEvents") {

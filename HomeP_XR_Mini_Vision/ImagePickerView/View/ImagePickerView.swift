@@ -114,7 +114,7 @@ extension ImagePickerView {
     }
     @ViewBuilder
     private func thumbnailView(imageAsset: ImageAsset) -> some View {
-        let viewSize: CGFloat = 100
+        let viewSize: CGFloat = 300
         
         GeometryReader { proxy in
             let size = proxy.size
