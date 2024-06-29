@@ -16,10 +16,16 @@ struct WelcomeView: View {
     
     var body: some View {
         VStack {
-            Text("Welcome to Spatial MiniHomP!")
-            Button("Start") {
-                showImmersiveSpace = true
-            }
+            Text("Welcome to Spatial Workspace!")
+                .font(.largeTitle)
+//            Button("Start") {
+//                showImmersiveSpace = true
+//            }
+            Toggle("Show My Workspace", isOn: $showImmersiveSpace)
+                .font(.headline)
+                .frame(width: 400)
+                .padding(20)
+                .glassBackgroundEffect()
             .onChange(of: showImmersiveSpace) { _, newValue in
                 Task {
                     if newValue {

@@ -25,35 +25,34 @@ struct ImmersiveView: View {
             let cornerRadius: Float = smallestDimension / 2
             
             let planeMesh = MeshResource.generateBox(width: boxWidth, height: boxHeight, depth: boxDepth, cornerRadius: cornerRadius)
-            let planeMaterial = SimpleMaterial(color: .systemGreen, roughness: 0.8, isMetallic: false)
+            let planeMaterial = SimpleMaterial(color: .systemGray6, roughness: 0.8, isMetallic: false)
             let planeEntity = ModelEntity(mesh: planeMesh, materials: [planeMaterial])
             planeEntity.position = [0, 0, 0]
             
             anchor.addChild(planeEntity)
             
-            if let sample = attachments.entity(for: "sample") {
-                sample.position = [0, 0.2, 0]
-                planeEntity.addChild(sample)
-            }
-            
             if let photoAlbum = attachments.entity(for: "photoAlbum") {
-                photoAlbum.position = [0, 0.8, 0]
+                photoAlbum.position = [0.6, 0.3, -0.4]
                 planeEntity.addChild(photoAlbum)
             }
             
             if let calendarEvents = attachments.entity(for: "calendarEvents") {
-                calendarEvents.position = [0, 1.0, 0]
+                calendarEvents.position = [-0.6, 0.3, -0.4]
                 planeEntity.addChild(calendarEvents)
             }
             
             if let car = try? await Entity(named: "model_s") {
-                car.position = [-0.6, 0, 0.3]
+                car.position = [-0.65, 0.015, 0.3]
+//                let rotationAngle: Float = .pi / 4  // 45 degrees in radians
+//                car.transform.rotation = simd_quatf(angle: rotationAngle, axis: [1, 0, 0])
                 planeEntity.addChild(car)
             }
             
             if let room = try? await Entity(named: "Room") {
-                room.position = [0.5, 0.02, 0.3]
-                room.scale = [0.025, 0.025, 0.025]
+                room.position = [0.65, 0.015, 0.3]
+                room.scale = [0.03, 0.03, 0.03]
+//                let rotationAngle: Float = .pi / 2  // 90 degrees in radians
+//                room.transform.rotation = simd_quatf(angle: rotationAngle, axis: [0, 1, 0])  // Y-axis rotation
                 planeEntity.addChild(room)
             }
         } update: { content, attachments in

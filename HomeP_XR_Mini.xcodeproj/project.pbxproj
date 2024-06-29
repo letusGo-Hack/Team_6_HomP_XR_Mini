@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		210739F82C2FD27200DA7A83 /* ImmersiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210739F72C2FD27200DA7A83 /* ImmersiveView.swift */; };
-		210739FA2C2FD83400DA7A83 /* Swift.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 210739F92C2FD83400DA7A83 /* Swift.usdz */; };
 		210739FC2C2FDEAB00DA7A83 /* model_s.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 210739FB2C2FDEAB00DA7A83 /* model_s.usdz */; };
 		21073A002C2FE45400DA7A83 /* Room.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 210739FF2C2FE45400DA7A83 /* Room.usdz */; };
 		21073A022C2FF19700DA7A83 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21073A012C2FF19700DA7A83 /* WelcomeView.swift */; };
@@ -32,7 +31,6 @@
 
 /* Begin PBXFileReference section */
 		210739F72C2FD27200DA7A83 /* ImmersiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveView.swift; sourceTree = "<group>"; };
-		210739F92C2FD83400DA7A83 /* Swift.usdz */ = {isa = PBXFileReference; lastKnownFileType = file; path = Swift.usdz; sourceTree = "<group>"; };
 		210739FB2C2FDEAB00DA7A83 /* model_s.usdz */ = {isa = PBXFileReference; lastKnownFileType = file; path = model_s.usdz; sourceTree = "<group>"; };
 		210739FF2C2FE45400DA7A83 /* Room.usdz */ = {isa = PBXFileReference; lastKnownFileType = file; path = Room.usdz; sourceTree = "<group>"; };
 		21073A012C2FF19700DA7A83 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
@@ -126,7 +124,6 @@
 				210739F72C2FD27200DA7A83 /* ImmersiveView.swift */,
 				21EA6B072C2FA0F6005C7738 /* Assets.xcassets */,
 				210739FF2C2FE45400DA7A83 /* Room.usdz */,
-				210739F92C2FD83400DA7A83 /* Swift.usdz */,
 				210739FB2C2FDEAB00DA7A83 /* model_s.usdz */,
 				21EA6B0C2C2FA0F6005C7738 /* Info.plist */,
 				21EA6B092C2FA0F6005C7738 /* Preview Content */,
@@ -301,7 +298,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				210739FA2C2FD83400DA7A83 /* Swift.usdz in Resources */,
 				21EA6B0B2C2FA0F6005C7738 /* Preview Assets.xcassets in Resources */,
 				21EA6B082C2FA0F6005C7738 /* Assets.xcassets in Resources */,
 				210739FC2C2FDEAB00DA7A83 /* model_s.usdz in Resources */,
