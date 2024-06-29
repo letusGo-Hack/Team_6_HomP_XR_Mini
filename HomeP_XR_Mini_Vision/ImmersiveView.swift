@@ -59,8 +59,8 @@ struct ImmersiveView: View {
                     Button("Album", systemImage: "photo.badge.plus.fill", role: .none) {
                         isPhotoAlbumPresented.toggle()
                     }
-                    .sheet(isPresented: isPhotoAlbumPresented) {
-                        ImagePickerView()
+                    .sheet(isPresented: $isPhotoAlbumPresented) {
+                        ImagePickerView(viewModel: ImagePickerViewModel())
                     }
                         
                 }
