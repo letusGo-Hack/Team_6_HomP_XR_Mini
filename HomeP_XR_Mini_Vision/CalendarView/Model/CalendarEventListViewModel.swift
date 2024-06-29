@@ -14,7 +14,7 @@ class CalendarEventListViewModel: ObservableObject {
     @Published var events: [EKEvent] = []
     
     func requestFullAccessToEvents(completion: @escaping (Bool, Error?) -> Void) {
-        eventStore.requestFullAccessToEvents { (granted, error) in
+        eventStore.requestFullAccessToEvents { granted, error in
             DispatchQueue.main.async {
                 completion(granted, error)
             }
@@ -23,16 +23,15 @@ class CalendarEventListViewModel: ObservableObject {
     
     func fetchAllEvents(completion: @escaping () -> Void) {
         let calendar = Calendar.current
-        let startDate = calendar.date(from: DateComponents(year: 1970))!
-        let endDate = calendar.date(from: DateComponents(year: 3000))!
+        let startDate = calendar.date(byAdding: .month, value: -1, to: Date())!
+        let endDate = calendar.date(byAdding: .month, value: 1, to: Date())!
         
         let calendars = eventStore.calendars(for: .event)
         let predicate = eventStore.predicateForEvents(withStart: startDate, end: endDate, calendars: calendars)
         DispatchQueue.global().async {
             let events = self.eventStore.events(matching: predicate)
             DispatchQueue.main.async {
-                self.events = events.sorted(by: { $0.startDate > $1.startDate }) // 최신순으로 정렬
-//                print("Fetched Events: \(events)")  // Debugging output
+                self.events = events.sorted(by: { $0.startDate > $1.startDate })
                 completion()
             }
         }

@@ -64,20 +64,21 @@ struct EventRow: View {
     init(event: EKEvent) {
         self.event = event
         self.dateFormatter = DateFormatter()
-        self.dateFormatter.dateStyle = .medium
-        self.dateFormatter.timeStyle = .short
+        self.dateFormatter.dateFormat = "yyyy년 MM월 dd일 hh:mm a"
         self.dateFormatter.timeZone = TimeZone.current
     }
 
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .leading, spacing: 10) {
             Text(event.title)
                 .font(.headline)
+                .fontWeight(.bold)
+            
             if let location = event.location {
                 Text(location)
                     .font(.subheadline)
-                    .foregroundColor(.gray)
             }
+            
             Text(dateFormatter.string(from: event.startDate))
                 .font(.subheadline)
                 .foregroundColor(.blue)
