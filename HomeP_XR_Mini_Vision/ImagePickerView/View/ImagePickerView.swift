@@ -46,8 +46,8 @@ extension ImagePickerView {
                         }
                 }
             })
+            .padding(10)
         })
-        .padding(.horizontal, 10)
         .frame(maxHeight: .infinity)
     }
     @ViewBuilder
