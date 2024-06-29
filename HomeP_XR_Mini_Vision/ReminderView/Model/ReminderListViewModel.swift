@@ -7,11 +7,21 @@
 
 import Foundation
 import EventKit
+import Combine
 
 class ReminderListViewModel: ObservableObject {
     private let eventStore = EKEventStore()
+    private var cancellables: Set<AnyCancellable> = []
     
     @Published var reminders: [EKReminder] = []
+    
+    init() {
+        NotificationCenter.default.publisher(for: .EKEventStoreChanged)
+            .sink { [weak self] _ in
+                self?.fetchAllReminders(completion: {})
+            }
+            .store(in: &cancellables)
+    }
     
     func requestFullAccessToReminders(completion: @escaping (Bool, Error?) -> Void) {
         eventStore.requestFullAccessToReminders { granted, error in

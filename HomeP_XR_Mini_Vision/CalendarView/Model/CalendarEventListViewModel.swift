@@ -7,11 +7,21 @@
 
 import Foundation
 import EventKit
+import Combine
 
 class CalendarEventListViewModel: ObservableObject {
     private let eventStore = EKEventStore()
+    private var cancellables: Set<AnyCancellable> = []
     
     @Published var events: [EKEvent] = []
+    
+    init() {
+        NotificationCenter.default.publisher(for: .EKEventStoreChanged)
+            .sink { [weak self] _ in
+                self?.fetchAllEvents(completion: {})
+            }
+            .store(in: &cancellables)
+    }
     
     func requestFullAccessToEvents(completion: @escaping (Bool, Error?) -> Void) {
         eventStore.requestFullAccessToEvents { granted, error in

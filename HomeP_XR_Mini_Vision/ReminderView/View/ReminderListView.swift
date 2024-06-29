@@ -10,15 +10,13 @@ import EventKit
 
 struct ReminderListView: View {
     @StateObject private var reminderViewModel = ReminderListViewModel()
-    @State private var displayedReminders: [EKReminder] = []
     
     var body: some View {
         VStack {
             Text("Reminders")
                 .font(.largeTitle)
-                .padding()
-            
-            List(displayedReminders, id: \.self) { reminder in
+
+            List(reminderViewModel.reminders, id: \.self) { reminder in
                 ReminderRow(reminder: reminder)
                     .frame(maxWidth: .infinity)
 //                    .cornerRadius(8)
@@ -34,27 +32,18 @@ struct ReminderListView: View {
             reminderViewModel.requestFullAccessToReminders { granted, error in
                 if granted {
                     reminderViewModel.fetchAllReminders {
-                        updateDisplayedReminders()
+                        print("Reminder Fetch Success")
                     }
                 } else {
                     if let error = error {
-                        print("Access denied: \(error.localizedDescription)")
+                        print("Reminder Access denied: \(error.localizedDescription)")
                     } else {
-                        print("Access denied")
+                        print("Reminder Access denied")
                     }
                 }
             }
         }
         .glassBackgroundEffect()
-    }
-    
-    private func updateDisplayedReminders() {
-        self.displayedReminders = reminderViewModel.reminders.filter { $0.dueDateComponents?.date ?? Date() > Date(timeIntervalSince1970: 0) } // Filter out reminders with invalid dates
-        
-//        // Debugging output
-//        for reminder in self.displayedReminders {
-//            print("Reminder: \(reminder.title), Due Date: \(reminder.dueDateComponents?.date)")
-//        }
     }
 }
 

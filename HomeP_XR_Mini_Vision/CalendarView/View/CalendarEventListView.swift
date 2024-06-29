@@ -10,7 +10,6 @@ import EventKit
 
 struct CalendarEventListView: View {
     @StateObject private var calendarViewModel = CalendarEventListViewModel()
-    @State private var displayedEvents: [EKEvent] = []
     
     var body: some View {
         VStack {
@@ -18,7 +17,7 @@ struct CalendarEventListView: View {
                 .font(.largeTitle)
                 .padding()
             
-            List(displayedEvents, id: \.self) { event in
+            List(calendarViewModel.events, id: \.self) { event in
                 EventRow(event: event)
                     .frame(maxWidth: .infinity)
 //                    .cornerRadius(8)
@@ -34,27 +33,18 @@ struct CalendarEventListView: View {
             calendarViewModel.requestFullAccessToEvents { granted, error in
                 if granted {
                     calendarViewModel.fetchAllEvents {
-                        updateDisplayedEvents()
+                        print("Calender Fetch Success")
                     }
                 } else {
                     if let error = error {
-                        print("Access denied: \(error.localizedDescription)")
+                        print("Calender Access denied: \(error.localizedDescription)")
                     } else {
-                        print("Access denied")
+                        print("Calender Access denied")
                     }
                 }
             }
         }
         .glassBackgroundEffect()
-    }
-    
-    private func updateDisplayedEvents() {
-        self.displayedEvents = calendarViewModel.events.filter { $0.startDate > Date(timeIntervalSince1970: 0) } // Filter out events with invalid dates
-        
-//        // Debugging output
-//        for event in self.displayedEvents {
-//            print("Event: \(event.title), Start Date: \(event.startDate)")
-//        }
     }
 }
 
