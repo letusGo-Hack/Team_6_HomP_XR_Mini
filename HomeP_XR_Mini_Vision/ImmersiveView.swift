@@ -36,6 +36,11 @@ struct ImmersiveView: View {
                 planeEntity.addChild(attachment)
             }
             
+            if let map = attachments.entity(for: "map") {
+                map.position = [0, 0, 0.3]
+                planeEntity.addChild(map)
+            }
+            
             if let photoAlbum = attachments.entity(for: "photoAlbum") {
                 photoAlbum.position = [0.6, 0.3, -0.4]
                 planeEntity.addChild(photoAlbum)
@@ -106,6 +111,10 @@ struct ImmersiveView: View {
             
             Attachment(id: "carinfo") {
                 CarInfo()
+            }
+            
+            Attachment(id: "map") {
+                MapView()
             }
         }
     }
