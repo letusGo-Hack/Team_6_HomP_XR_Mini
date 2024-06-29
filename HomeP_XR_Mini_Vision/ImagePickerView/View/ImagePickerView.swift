@@ -25,7 +25,7 @@ public struct ImagePickerView: View {
             thumbnailScrollView
         }//VStack
         .ignoresSafeArea(edges: .all)
-        .glassBackgroundEffect()
+//        .glassBackgroundEffect()
     }
 }
 //MARK: - View
