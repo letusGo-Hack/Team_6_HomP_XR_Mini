@@ -36,6 +36,11 @@ struct ImmersiveView: View {
                     planeEntity.addChild(photoAlbum)
                 }
                 
+                if let calendarEvents = attachments.entity(for: "calendarEvents") {
+                    calendarEvents.position = [0, 1.0, 0]
+                    planeEntity.addChild(calendarEvents)
+                }
+                
                 if let swift = try? await Entity(named: "Swift") {
                     swift.position = [0, 0, 0]
                     planeEntity.addChild(swift)
@@ -70,6 +75,10 @@ struct ImmersiveView: View {
                 Attachment(id: "photoAlbum") {
 //                    ImagePickerView(viewModel: ImagePickerViewModel())
                     Text("Image")
+                }
+                
+                Attachment(id: "calendarEvents") {
+                    CalendarEventListView()
                 }
             }
         }
