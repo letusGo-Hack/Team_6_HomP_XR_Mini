@@ -19,8 +19,9 @@ struct ImmersiveView: View {
                                                  minimumBounds: [0.3, 0.3]))
                 content.add(anchor)
                 
-                let planeMesh = MeshResource.generatePlane(width: 2, depth: 1)
-                let redMaterial = SimpleMaterial(color: .red, roughness: 0.8, isMetallic: false)
+                let planeMesh = MeshResource.generateBox(width: 2, height: 0.015, depth: 1)
+//                let planeMesh = MeshResource.generatePlane(width: 2, depth: 1)
+                let redMaterial = SimpleMaterial(color: .systemGreen, roughness: 0.8, isMetallic: false)
                 let planeEntity = ModelEntity(mesh: planeMesh, materials: [redMaterial])
                 planeEntity.position = [0, 0, 0]
                 
