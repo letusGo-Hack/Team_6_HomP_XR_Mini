@@ -17,7 +17,7 @@ public final class ImagePickerViewModel: ObservableObject {
     private let imageSize: CGSize = .init(width: 270, height: 270)
     private let imagesPerPage: Int = 50
        
-    var selectedAlbumIndex: Int {
+    var selectedAlbumIndex: Int = 0 {
         didSet {
             let endIndex: Int = self.albumList[selectedAlbumIndex].count > 20
             ? self.imagesPerPage
@@ -47,10 +47,20 @@ public final class ImagePickerViewModel: ObservableObject {
     }
     
     public init() {
-        self.selectedAlbumIndex = 0
         self.repository = ImagePickerRepository()
         bind()
-        fetchAlbums()
+        PHPhotoLibrary.requestAuthorization(for: .readWrite) { [weak self] status in
+            switch status {
+            case .authorized:
+                self?.fetchAlbums()
+            case .restricted:
+                self?.fetchAlbums()
+            default: break
+            }
+        }
+//        self.repository = ImagePickerRepository()
+//        bind()
+//        fetchAlbums()
     }
 
     //MARK: - Pagination
@@ -89,6 +99,7 @@ public final class ImagePickerViewModel: ObservableObject {
 extension ImagePickerViewModel {
     private func bind() {
         repository.$albumList
+            .receive(on: DispatchQueue.main)
             .sink { [weak self] albums in
                 guard let self else { return }
                 self.albumList = albums
@@ -97,6 +108,7 @@ extension ImagePickerViewModel {
             .store(in: &cancellables)
         
         repository.$imageList
+            .receive(on: DispatchQueue.main)
             .sink { [weak self] images in
                 self?.imageList.append(contentsOf: images)
             }
@@ -108,11 +120,21 @@ extension ImagePickerViewModel {
     }
     
     private func fetchImages() {
-        let indexSet = self.albumList[self.selectedAlbumIndex].count > self.imagesPerPage
-        ? self.indexSet
-        : IndexSet(integersIn: 0..<self.albumList[self.selectedAlbumIndex].count)
-        repository.fetchImages(album: albumList[self.selectedAlbumIndex].album,
-                               size: imageSize,
-                               indexSet: indexSet)
+        if let albumList = self.albumList[safeIndex: self.selectedAlbumIndex] {
+            let indexSet = albumList.count > self.imagesPerPage ? self.indexSet : IndexSet(integersIn: 0..<albumList.count)
+            
+            repository.fetchImages(album: albumList.album,
+                                   size: imageSize,
+                                   indexSet: indexSet)
+        }
+    }
+}
+
+extension Array {
+    subscript(safeIndex index: Int) -> Element? {
+        guard index >= 0, index < endIndex else {
+            return nil
+        }
+        return self[index]
     }
 }
