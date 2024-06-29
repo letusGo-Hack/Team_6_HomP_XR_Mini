@@ -40,7 +40,6 @@ extension ImagePickerView {
     @ViewBuilder
     private var topNavigation: some View {
         HStack {
-            backButton
             albumNameButton
             Spacer()
             if $viewModel.selectedImages.isEmpty == false {
@@ -51,15 +50,7 @@ extension ImagePickerView {
         .background(backGroundColor)
         .zIndex(1)
     }
-    // X 버튼
-    @ViewBuilder
-    private var backButton: some View {
-        Button {
-//
-        } label: {
-            closeImage
-        }
-    }
+
     // 앨범 선택 버튼
     @ViewBuilder
     private var albumNameButton: some View {
@@ -269,12 +260,5 @@ private extension ImagePickerView {
         return Image(systemName: "chevron.down")
             .resizable()
             .frame(width: 24, height: 24)
-    }
-    
-    var closeImage: some View {
-        return Image(systemName: "xmark")
-            .resizable()
-            .frame(width: 24, height: 24)
-            .padding(EdgeInsets(top: 0, leading: 18, bottom: 0, trailing: 0))
     }
 }
