@@ -21,6 +21,9 @@ struct ImmersiveView: View {
                                              minimumBounds: [0.3, 0.3]))
             content.add(anchor)
             
+            let wallAnchor = AnchorEntity(.plane(.vertical, classification: .wall, minimumBounds: [0.3, 0.3]))
+            content.add(wallAnchor)
+            
             let smallestDimension = min(boxWidth, boxHeight, boxDepth)
             let cornerRadius: Float = smallestDimension / 2
             
@@ -37,12 +40,23 @@ struct ImmersiveView: View {
             }
             
             if let map = attachments.entity(for: "map") {
-                map.position = [0, 0, 0.3]
+                
+//                let planeMesh = MeshResource.generateBox(width: boxWidth, height: boxHeight, depth: boxDepth, cornerRadius: cornerRadius)
+//                let planeMaterial = SimpleMaterial(color: .clear, roughness: 0.8, isMetallic: false)
+//                let planeEntity = ModelEntity(mesh: planeMesh, materials: [planeMaterial])
+//                planeEntity.position = [0, 0, 0]
+//
+//                wallAnchor.addChild(planeEntity)
+//                
+//                map.position = [0, 0, 0]
+//                planeEntity.addChild(map)
+                
+                map.position = [0, 0.5, -1]
                 planeEntity.addChild(map)
             }
             
             if let photoAlbum = attachments.entity(for: "photoAlbum") {
-                photoAlbum.position = [0.6, 0.3, -0.4]
+                photoAlbum.position = [0.9, 0.35, -0.45]
                 planeEntity.addChild(photoAlbum)
             }
             
