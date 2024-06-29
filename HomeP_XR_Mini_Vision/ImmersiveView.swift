@@ -31,6 +31,11 @@ struct ImmersiveView: View {
             
             anchor.addChild(planeEntity)
             
+            if let attachment = attachments.entity(for: "clock") {
+                attachment.position = [0, 0, 0.52]
+                planeEntity.addChild(attachment)
+            }
+            
             if let photoAlbum = attachments.entity(for: "photoAlbum") {
                 photoAlbum.position = [0.6, 0.3, -0.4]
                 planeEntity.addChild(photoAlbum)
@@ -77,6 +82,10 @@ struct ImmersiveView: View {
             
             Attachment(id: "calendarEvents") {
                 CalendarEventListView()
+            }
+            
+            Attachment(id: "clock") {
+                Dock()
             }
         }
     }
