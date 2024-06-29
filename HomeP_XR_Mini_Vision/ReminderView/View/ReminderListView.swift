@@ -32,13 +32,13 @@ struct ReminderListView: View {
             reminderViewModel.requestFullAccessToReminders { granted, error in
                 if granted {
                     reminderViewModel.fetchAllReminders {
-                        // Initial fetch
+                        print("Reminder Fetch Success")
                     }
                 } else {
                     if let error = error {
-                        print("Access denied: \(error.localizedDescription)")
+                        print("Reminder Access denied: \(error.localizedDescription)")
                     } else {
-                        print("Access denied")
+                        print("Reminder Access denied")
                     }
                 }
             }

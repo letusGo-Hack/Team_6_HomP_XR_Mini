@@ -33,13 +33,13 @@ struct CalendarEventListView: View {
             calendarViewModel.requestFullAccessToEvents { granted, error in
                 if granted {
                     calendarViewModel.fetchAllEvents {
-                        // Initial fetch
+                        print("Calender Fetch Success")
                     }
                 } else {
                     if let error = error {
-                        print("Access denied: \(error.localizedDescription)")
+                        print("Calender Access denied: \(error.localizedDescription)")
                     } else {
-                        print("Access denied")
+                        print("Calender Access denied")
                     }
                 }
             }
