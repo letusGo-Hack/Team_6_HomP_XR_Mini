@@ -45,6 +45,7 @@
 		21073A032C2FFC1A00DA7A83 /* Dock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dock.swift; sourceTree = "<group>"; };
 		21073A052C2FFEB600DA7A83 /* CarInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarInfo.swift; sourceTree = "<group>"; };
 		21073A072C30051A00DA7A83 /* RoomInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomInfo.swift; sourceTree = "<group>"; };
+		21073A092C300C5700DA7A83 /* HomeP_XR_Mini.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HomeP_XR_Mini.entitlements; sourceTree = "<group>"; };
 		21EA6AE82C2FA0B2005C7738 /* HomeP_XR_Mini.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeP_XR_Mini.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21EA6AEB2C2FA0B2005C7738 /* HomeP_XR_MiniApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeP_XR_MiniApp.swift; sourceTree = "<group>"; };
 		21EA6AED2C2FA0B2005C7738 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -111,6 +112,7 @@
 		21EA6AEA2C2FA0B2005C7738 /* HomeP_XR_Mini */ = {
 			isa = PBXGroup;
 			children = (
+				21073A092C300C5700DA7A83 /* HomeP_XR_Mini.entitlements */,
 				21EA6AEB2C2FA0B2005C7738 /* HomeP_XR_MiniApp.swift */,
 				21EA6AED2C2FA0B2005C7738 /* ContentView.swift */,
 				21EA6AEF2C2FA0B3005C7738 /* Assets.xcassets */,
@@ -517,12 +519,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HomeP_XR_Mini/HomeP_XR_Mini.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HomeP_XR_Mini/Preview Content\"";
-				DEVELOPMENT_TEAM = 2MQRAJ9FWM;
+				DEVELOPMENT_TEAM = 3ZTVE7CS5L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Vision Desk";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -546,12 +550,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HomeP_XR_Mini/HomeP_XR_Mini.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"HomeP_XR_Mini/Preview Content\"";
-				DEVELOPMENT_TEAM = 2MQRAJ9FWM;
+				DEVELOPMENT_TEAM = 3ZTVE7CS5L;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Vision Desk";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
