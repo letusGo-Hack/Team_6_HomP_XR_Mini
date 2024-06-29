@@ -14,5 +14,9 @@ struct HomeP_XR_Mini_VisionApp: App {
             ContentView()
         }
         .windowStyle(.volumetric)
+        
+        ImmersiveSpace(id: "ImmersiveSpace") {
+            ImmersiveView()
+        }
     }
 }

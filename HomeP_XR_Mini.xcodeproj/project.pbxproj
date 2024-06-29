@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		210739F82C2FD27200DA7A83 /* ImmersiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210739F72C2FD27200DA7A83 /* ImmersiveView.swift */; };
 		21EA6AEC2C2FA0B2005C7738 /* HomeP_XR_MiniApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EA6AEB2C2FA0B2005C7738 /* HomeP_XR_MiniApp.swift */; };
 		21EA6AEE2C2FA0B2005C7738 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EA6AED2C2FA0B2005C7738 /* ContentView.swift */; };
 		21EA6AF02C2FA0B3005C7738 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21EA6AEF2C2FA0B3005C7738 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		210739F72C2FD27200DA7A83 /* ImmersiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveView.swift; sourceTree = "<group>"; };
 		21EA6AE82C2FA0B2005C7738 /* HomeP_XR_Mini.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeP_XR_Mini.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21EA6AEB2C2FA0B2005C7738 /* HomeP_XR_MiniApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeP_XR_MiniApp.swift; sourceTree = "<group>"; };
 		21EA6AED2C2FA0B2005C7738 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			children = (
 				21EA6B032C2FA0F4005C7738 /* HomeP_XR_Mini_VisionApp.swift */,
 				21EA6B052C2FA0F4005C7738 /* ContentView.swift */,
+				210739F72C2FD27200DA7A83 /* ImmersiveView.swift */,
 				21EA6B072C2FA0F6005C7738 /* Assets.xcassets */,
 				21EA6B0C2C2FA0F6005C7738 /* Info.plist */,
 				21EA6B092C2FA0F6005C7738 /* Preview Content */,
@@ -229,6 +232,7 @@
 			files = (
 				21EA6B062C2FA0F4005C7738 /* ContentView.swift in Sources */,
 				21EA6B042C2FA0F4005C7738 /* HomeP_XR_Mini_VisionApp.swift in Sources */,
+				210739F82C2FD27200DA7A83 /* ImmersiveView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

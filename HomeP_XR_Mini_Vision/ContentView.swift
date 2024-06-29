@@ -9,23 +9,38 @@ import SwiftUI
 import RealityKit
 
 struct ContentView: View {
+    @Environment(\.openImmersiveSpace) var openImmersiveSpace
+    @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
+    
+    @State private var showImmersiveSpace = false
+    @State private var immersiveSpaceIsShown = false
+    
     var body: some View {
         VStack {
-            RealityView { content in
-                
-                let planeMesh = MeshResource.generatePlane(width: 2, depth: 1)
-                let redMaterial = SimpleMaterial(color: .red, roughness: 0.8, isMetallic: false)
-                let planeEntity = ModelEntity(mesh: planeMesh, materials: [redMaterial])
-                planeEntity.position = [0, 0, 0]
-                content.add(planeEntity)
-            } update: { content in
-                // Update the RealityKit content when SwiftUI state changes
+            Toggle("Show Plane Detection", isOn: $showImmersiveSpace)
+                .font(.title)
+                .frame(width: 400)
+                .padding(20)
+                .glassBackgroundEffect()
+        }
+        .padding()
+        .onChange(of: showImmersiveSpace) { _, newValue in
+            Task {
+                if newValue {
+                    switch await openImmersiveSpace(id: "ImmersiveSpace") {
+                    case .opened:
+                        immersiveSpaceIsShown = true
+                    case .error, .userCancelled:
+                        fallthrough
+                    @unknown default:
+                        immersiveSpaceIsShown = false
+                        showImmersiveSpace = false
+                    }
+                } else if immersiveSpaceIsShown {
+                    await dismissImmersiveSpace()
+                    immersiveSpaceIsShown = false
+                }
             }
-            VStack {
-                Text("Hello, visionOS!")
-            }
-            .padding()
-            .glassBackgroundEffect()
         }
     }
 }
