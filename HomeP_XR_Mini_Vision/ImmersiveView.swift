@@ -51,12 +51,12 @@ struct ImmersiveView: View {
 //                map.position = [0, 0, 0]
 //                planeEntity.addChild(map)
                 
-                map.position = [0, 0.5, -1]
+                map.position = [0, 1, -3]
                 planeEntity.addChild(map)
             }
             
             if let photoAlbum = attachments.entity(for: "photoAlbum") {
-                photoAlbum.position = [0.9, 0.35, -0.45]
+                photoAlbum.position = [1.2, 0.35, -0.45]
                 planeEntity.addChild(photoAlbum)
             }
             
@@ -129,6 +129,9 @@ struct ImmersiveView: View {
             
             Attachment(id: "map") {
                 MapView()
+                    .cornerRadius(33)
+//                    .frame(width: 1500, height: 1500)
+                    .frame(width: 3500, height: 3500)
             }
         }
     }
