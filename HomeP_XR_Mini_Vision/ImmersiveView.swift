@@ -10,8 +10,6 @@ import RealityKit
 import ARKit
 
 struct ImmersiveView: View {
-    @State private var isPhotoAlbumPresented = false
-    
     var body: some View {
         RealityView { content, attachments in
             let anchor = AnchorEntity(.plane(.horizontal,
@@ -74,8 +72,7 @@ struct ImmersiveView: View {
             }
             
             Attachment(id: "photoAlbum") {
-                //                    ImagePickerView(viewModel: ImagePickerViewModel())
-                Text("Image")
+                ImagePickerView(viewModel: ImagePickerViewModel())
             }
             
             Attachment(id: "calendarEvents") {
