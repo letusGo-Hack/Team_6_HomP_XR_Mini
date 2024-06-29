@@ -58,6 +58,11 @@ struct ImmersiveView: View {
                 planeEntity.addChild(car)
             }
             
+            if let attachment = attachments.entity(for: "carinfo") {
+                attachment.position = [-0.85, 0.035, 0.4]
+                planeEntity.addChild(attachment)
+            }
+            
             if let room = try? await Entity(named: "Room") {
                 room.position = [0.65, 0.015, 0.3]
                 room.scale = [0.03, 0.03, 0.03]
@@ -97,6 +102,10 @@ struct ImmersiveView: View {
             
             Attachment(id: "clock") {
                 Dock()
+            }
+            
+            Attachment(id: "carinfo") {
+                CarInfo()
             }
         }
     }

@@ -12,6 +12,7 @@
 		21073A002C2FE45400DA7A83 /* Room.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 210739FF2C2FE45400DA7A83 /* Room.usdz */; };
 		21073A022C2FF19700DA7A83 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21073A012C2FF19700DA7A83 /* WelcomeView.swift */; };
 		21073A042C2FFC1A00DA7A83 /* Dock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21073A032C2FFC1A00DA7A83 /* Dock.swift */; };
+		21073A062C2FFEB600DA7A83 /* CarInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21073A052C2FFEB600DA7A83 /* CarInfo.swift */; };
 		21EA6AEC2C2FA0B2005C7738 /* HomeP_XR_MiniApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EA6AEB2C2FA0B2005C7738 /* HomeP_XR_MiniApp.swift */; };
 		21EA6AEE2C2FA0B2005C7738 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EA6AED2C2FA0B2005C7738 /* ContentView.swift */; };
 		21EA6AF02C2FA0B3005C7738 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21EA6AEF2C2FA0B3005C7738 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 		210739FF2C2FE45400DA7A83 /* Room.usdz */ = {isa = PBXFileReference; lastKnownFileType = file; path = Room.usdz; sourceTree = "<group>"; };
 		21073A012C2FF19700DA7A83 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		21073A032C2FFC1A00DA7A83 /* Dock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dock.swift; sourceTree = "<group>"; };
+		21073A052C2FFEB600DA7A83 /* CarInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarInfo.swift; sourceTree = "<group>"; };
 		21EA6AE82C2FA0B2005C7738 /* HomeP_XR_Mini.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeP_XR_Mini.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21EA6AEB2C2FA0B2005C7738 /* HomeP_XR_MiniApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeP_XR_MiniApp.swift; sourceTree = "<group>"; };
 		21EA6AED2C2FA0B2005C7738 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				21EA6B052C2FA0F4005C7738 /* ContentView.swift */,
 				210739F72C2FD27200DA7A83 /* ImmersiveView.swift */,
 				21073A032C2FFC1A00DA7A83 /* Dock.swift */,
+				21073A052C2FFEB600DA7A83 /* CarInfo.swift */,
 				21EA6B072C2FA0F6005C7738 /* Assets.xcassets */,
 				210739FF2C2FE45400DA7A83 /* Room.usdz */,
 				210739FB2C2FDEAB00DA7A83 /* model_s.usdz */,
@@ -363,6 +366,7 @@
 				A57A8BA12C2FFFC3000F7394 /* ReminderListViewModel.swift in Sources */,
 				21EA6B062C2FA0F4005C7738 /* ContentView.swift in Sources */,
 				21073A042C2FFC1A00DA7A83 /* Dock.swift in Sources */,
+				21073A062C2FFEB600DA7A83 /* CarInfo.swift in Sources */,
 				21073A022C2FF19700DA7A83 /* WelcomeView.swift in Sources */,
 				21EA6B042C2FA0F4005C7738 /* HomeP_XR_Mini_VisionApp.swift in Sources */,
 				A57A8B8B2C2FE632000F7394 /* CalendarEventListView.swift in Sources */,
