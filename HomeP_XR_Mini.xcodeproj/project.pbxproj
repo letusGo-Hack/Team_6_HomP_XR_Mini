@@ -11,7 +11,6 @@
 		21EA6AEE2C2FA0B2005C7738 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EA6AED2C2FA0B2005C7738 /* ContentView.swift */; };
 		21EA6AF02C2FA0B3005C7738 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21EA6AEF2C2FA0B3005C7738 /* Assets.xcassets */; };
 		21EA6AF32C2FA0B3005C7738 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21EA6AF22C2FA0B3005C7738 /* Preview Assets.xcassets */; };
-		21EA6B022C2FA0F4005C7738 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 21EA6B012C2FA0F4005C7738 /* RealityKitContent */; };
 		21EA6B042C2FA0F4005C7738 /* HomeP_XR_Mini_VisionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EA6B032C2FA0F4005C7738 /* HomeP_XR_Mini_VisionApp.swift */; };
 		21EA6B062C2FA0F4005C7738 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21EA6B052C2FA0F4005C7738 /* ContentView.swift */; };
 		21EA6B082C2FA0F6005C7738 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21EA6B072C2FA0F6005C7738 /* Assets.xcassets */; };
@@ -45,7 +44,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21EA6B022C2FA0F4005C7738 /* RealityKitContent in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,7 +150,6 @@
 			);
 			name = HomeP_XR_Mini_Vision;
 			packageProductDependencies = (
-				21EA6B012C2FA0F4005C7738 /* RealityKitContent */,
 			);
 			productName = HomeP_XR_Mini_Vision;
 			productReference = 21EA6AFD2C2FA0F4005C7738 /* HomeP_XR_Mini_Vision.app */;
@@ -502,13 +499,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		21EA6B012C2FA0F4005C7738 /* RealityKitContent */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = RealityKitContent;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 21EA6AE02C2FA0B2005C7738 /* Project object */;
 }
