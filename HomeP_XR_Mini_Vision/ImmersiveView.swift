@@ -33,6 +33,11 @@ struct ImmersiveView: View {
                     swift.position = [0, 0, 0]
                     planeEntity.addChild(swift)
                 }
+                
+                if let swift = try? await Entity(named: "model_s") {
+                    swift.position = [0.2, 0, 0.2]
+                    planeEntity.addChild(swift)
+                }
             } update: { content, attachments in
                 // Update the RealityKit content when SwiftUI state changes
             } placeholder: {
