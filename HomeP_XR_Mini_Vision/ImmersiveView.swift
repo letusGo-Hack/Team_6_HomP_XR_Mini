@@ -12,6 +12,10 @@ import ARKit
 struct ImmersiveView: View {
     @State private var isPhotoAlbumPresented = false
     
+    private let boxWidth: Float = 2
+    private let boxHeight: Float = 0.015
+    private let boxDepth: Float = 1
+    
     var body: some View {
         RealityView { content, attachments in
             let anchor = AnchorEntity(.plane(.horizontal,
@@ -19,10 +23,12 @@ struct ImmersiveView: View {
                                              minimumBounds: [0.3, 0.3]))
             content.add(anchor)
             
-            let planeMesh = MeshResource.generateBox(width: 2, height: 0.015, depth: 1)
-            //                let planeMesh = MeshResource.generatePlane(width: 2, depth: 1)
-            let redMaterial = SimpleMaterial(color: .systemGreen, roughness: 0.8, isMetallic: false)
-            let planeEntity = ModelEntity(mesh: planeMesh, materials: [redMaterial])
+            let smallestDimension = min(boxWidth, boxHeight, boxDepth)
+            let cornerRadius: Float = smallestDimension / 2
+            
+            let planeMesh = MeshResource.generateBox(width: boxWidth, height: boxHeight, depth: boxDepth, cornerRadius: cornerRadius)
+            let planeMaterial = SimpleMaterial(color: .systemGreen, roughness: 0.8, isMetallic: false)
+            let planeEntity = ModelEntity(mesh: planeMesh, materials: [planeMaterial])
             planeEntity.position = [0, 0, 0]
             
             anchor.addChild(planeEntity)
@@ -40,11 +46,6 @@ struct ImmersiveView: View {
             if let calendarEvents = attachments.entity(for: "calendarEvents") {
                 calendarEvents.position = [0, 1.0, 0]
                 planeEntity.addChild(calendarEvents)
-            }
-            
-            if let swift = try? await Entity(named: "Swift") {
-                swift.position = [0, 0, 0]
-                planeEntity.addChild(swift)
             }
             
             if let car = try? await Entity(named: "model_s") {
@@ -83,4 +84,8 @@ struct ImmersiveView: View {
             }
         }
     }
+}
+
+#Preview {
+    ImmersiveView()
 }
