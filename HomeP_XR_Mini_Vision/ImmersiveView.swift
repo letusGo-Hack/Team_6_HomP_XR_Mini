@@ -31,6 +31,11 @@ struct ImmersiveView: View {
                     planeEntity.addChild(sample)
                 }
                 
+                if let photoAlbum = attachments.entity(for: "photoAlbum") {
+                    photoAlbum.position = [0, 0.8, 0]
+                    planeEntity.addChild(photoAlbum)
+                }
+                
                 if let swift = try? await Entity(named: "Swift") {
                     swift.position = [0, 0, 0]
                     planeEntity.addChild(swift)
