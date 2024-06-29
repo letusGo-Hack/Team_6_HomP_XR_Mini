@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSRemindersUsageDescription</key>
+	<string>리마인더를 이용해보자.</string>
 	<key>NSCalendarsFullAccessUsageDescription</key>
 	<string>캘린더를 이용해보자.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
