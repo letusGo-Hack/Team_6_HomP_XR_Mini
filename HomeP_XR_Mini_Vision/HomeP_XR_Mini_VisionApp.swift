@@ -11,6 +11,11 @@ import SwiftUI
 struct HomeP_XR_Mini_VisionApp: App {
     var body: some Scene {
         WindowGroup {
+            WelcomeView()
+        }
+        .windowStyle(.automatic)
+        
+        WindowGroup {
             ContentView()
         }
         .windowStyle(.volumetric)
