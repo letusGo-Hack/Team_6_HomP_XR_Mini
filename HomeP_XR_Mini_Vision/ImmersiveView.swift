@@ -68,7 +68,8 @@ struct ImmersiveView: View {
                 }
                 
                 Attachment(id: "photoAlbum") {
-                    ImagePickerView(viewModel: ImagePickerViewModel())
+//                    ImagePickerView(viewModel: ImagePickerViewModel())
+                    Text("Image")
                 }
             }
         }
