@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ImagePickerView: View {
+public struct ImagePickerView: View {
     //MARK: - Private property
     @Environment(\.colorScheme) private var colorScheme
     

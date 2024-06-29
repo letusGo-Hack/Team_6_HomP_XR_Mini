@@ -90,8 +90,6 @@
 		21EA6AEA2C2FA0B2005C7738 /* HomeP_XR_Mini */ = {
 			isa = PBXGroup;
 			children = (
-				250364002C2FC96400FA795B /* PhotoView */,
-				256CB0662C2FBB4D00D6A14D /* PhotoService */,
 				21EA6AEB2C2FA0B2005C7738 /* HomeP_XR_MiniApp.swift */,
 				21EA6AED2C2FA0B2005C7738 /* ContentView.swift */,
 				21EA6AEF2C2FA0B3005C7738 /* Assets.xcassets */,
@@ -111,6 +109,8 @@
 		21EA6AFE2C2FA0F4005C7738 /* HomeP_XR_Mini_Vision */ = {
 			isa = PBXGroup;
 			children = (
+				250364002C2FC96400FA795B /* PhotoView */,
+				256CB0662C2FBB4D00D6A14D /* PhotoService */,
 				21EA6B032C2FA0F4005C7738 /* HomeP_XR_Mini_VisionApp.swift */,
 				21EA6B052C2FA0F4005C7738 /* ContentView.swift */,
 				210739F72C2FD27200DA7A83 /* ImmersiveView.swift */,

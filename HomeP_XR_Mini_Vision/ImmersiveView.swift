@@ -9,6 +9,8 @@ import SwiftUI
 import RealityKit
 
 struct ImmersiveView: View {
+    @State private var isPhotoAlbumPresented = false
+    
     var body: some View {
         VStack {
             RealityView { content, attachments in
@@ -51,6 +53,16 @@ struct ImmersiveView: View {
                     }
                     .padding()
                     .glassBackgroundEffect()
+                }
+                
+                Attachment(id: "photoAlbum") {
+                    Button("Album", systemImage: "photo.badge.plus.fill", role: .none) {
+                        isPhotoAlbumPresented.toggle()
+                    }
+                    .sheet(isPresented: isPhotoAlbumPresented) {
+                        ImagePickerView()
+                    }
+                        
                 }
             }
         }
