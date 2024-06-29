@@ -21,15 +21,15 @@ struct CalendarEventListView: View {
             List(displayedEvents, id: \.self) { event in
                 EventRow(event: event)
                     .frame(maxWidth: .infinity)
-                    .cornerRadius(8)
-                    .shadow(radius: 4)
-                    .padding(.horizontal)
-                    .padding(.vertical, 4)
-                    .background(.ultraThickMaterial, in: RoundedRectangle(cornerRadius: 8))
+//                    .cornerRadius(8)
+//                    .shadow(radius: 4)
+//                    .padding(.horizontal)
+//                    .padding(.vertical, 4)
+//                    .background(.ultraThickMaterial, in: RoundedRectangle(cornerRadius: 8))
             }
-            .frame(maxHeight: 350)
+//            .frame(maxHeight: 350)
         }
-        .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 8))
+//        .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 8))
         .onAppear {
             calendarViewModel.requestFullAccessToEvents { granted, error in
                 if granted {
@@ -45,6 +45,7 @@ struct CalendarEventListView: View {
                 }
             }
         }
+        .glassBackgroundEffect()
     }
     
     private func updateDisplayedEvents() {

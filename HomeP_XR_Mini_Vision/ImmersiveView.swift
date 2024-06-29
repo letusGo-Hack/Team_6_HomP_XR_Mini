@@ -47,12 +47,12 @@ struct ImmersiveView: View {
             }
             
             if let calendarEvents = attachments.entity(for: "calendarEvents") {
-                calendarEvents.position = [-0.6, 0.3, -0.4]
+                calendarEvents.position = [-0.9, 0.45, -0.15]
                 planeEntity.addChild(calendarEvents)
             }
             
             if let reminder = attachments.entity(for: "reminder") {
-                reminder.position = [-0.6, 0.2, -0.4]
+                reminder.position = [-0.6, 0.45, -0.25]
                 planeEntity.addChild(reminder)
             }
             
@@ -80,29 +80,20 @@ struct ImmersiveView: View {
         } placeholder: {
             Text("Loading")
         } attachments: {
-            Attachment(id: "sample") {
-                List {
-                    ForEach(1..<10) { index in
-                        Text("Item \(index)")
-                    }
-                }
-                .padding()
-                .glassBackgroundEffect()
-                .frame(maxWidth: 320, maxHeight: 480)
-            }
-            
             Attachment(id: "photoAlbum") {
                 ImagePickerView(viewModel: ImagePickerViewModel())
                     .background(.clear)
-                    .frame(maxWidth: 910, maxHeight: 500)
+                    .frame(maxWidth: 910, maxHeight: 800)
             }
             
             Attachment(id: "calendarEvents") {
                 CalendarEventListView()
+                    .frame(maxWidth: 320, maxHeight: 720)
             }
             
             Attachment(id: "reminder") {
                 ReminderListView()
+                    .frame(maxWidth: 320, maxHeight: 720)
             }
             
             Attachment(id: "clock") {

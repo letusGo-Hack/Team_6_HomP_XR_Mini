@@ -32,6 +32,7 @@ public struct ImagePickerView: View {
             }//ZStack
         }//VStack
         .ignoresSafeArea(edges: .all)
+        .glassBackgroundEffect()
     }
 }
 //MARK: - View
@@ -46,8 +47,8 @@ extension ImagePickerView {
                 selectImageButton
             }
         } //HStack
-        .frame(width: .infinity, height: 56)
-        .background(backGroundColor)
+        .frame(width: .infinity, height: 66)
+//        .background(backGroundColor)
         .zIndex(1)
     }
 
@@ -66,6 +67,7 @@ extension ImagePickerView {
             arrowDownImage
                 .rotationEffect(.degrees(angle))
         } //HStack
+        .padding(.leading, 16)
         .contentShape(Rectangle())
         .onTapGesture {
             withAnimation {
@@ -258,7 +260,7 @@ private extension ImagePickerView {
     
     var arrowDownImage: some View {
         return Image(systemName: "chevron.down")
-            .resizable()
-            .frame(width: 24, height: 24)
+//            .resizable()
+//            .frame(width: 24, height: 24)
     }
 }
