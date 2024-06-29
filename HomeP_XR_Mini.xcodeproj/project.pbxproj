@@ -25,8 +25,8 @@
 		25FECAB02C2FE4430020ECB2 /* ImageAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250363FC2C2FC33100FA795B /* ImageAsset.swift */; };
 		25FECAB12C2FE4480020ECB2 /* PhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250363F82C2FC20A00FA795B /* PhotoService.swift */; };
 		25FECAB22C2FE44E0020ECB2 /* AlbumInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250363FA2C2FC23400FA795B /* AlbumInfo.swift */; };
-		51C839292C2FEDE4006A0004 /* Cloud_C.usda in Resources */ = {isa = PBXBuildFile; fileRef = 51C839282C2FEDE4006A0004 /* Cloud_C.usda */; };
-		51C8392A2C2FEDE4006A0004 /* Cloud_C.usda in Resources */ = {isa = PBXBuildFile; fileRef = 51C839282C2FEDE4006A0004 /* Cloud_C.usda */; };
+		51C8392C2C2FF604006A0004 /* Cloud_C.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 51C8392B2C2FF604006A0004 /* Cloud_C.usdz */; };
+		51C8392D2C2FF604006A0004 /* Cloud_C.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 51C8392B2C2FF604006A0004 /* Cloud_C.usdz */; };
 		A57A8B8B2C2FE632000F7394 /* CalendarEventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A8B8A2C2FE632000F7394 /* CalendarEventListView.swift */; };
 		A57A8B8D2C2FE637000F7394 /* CalendarEventListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A8B8C2C2FE637000F7394 /* CalendarEventListViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -54,7 +54,7 @@
 		250363FE2C2FC48C00FA795B /* ImagePickerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerRepository.swift; sourceTree = "<group>"; };
 		250364032C2FC97C00FA795B /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		250364052C2FC9B900FA795B /* ImagePickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerViewModel.swift; sourceTree = "<group>"; };
-		51C839282C2FEDE4006A0004 /* Cloud_C.usda */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cloud_C.usda; sourceTree = "<group>"; };
+		51C8392B2C2FF604006A0004 /* Cloud_C.usdz */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cloud_C.usdz; sourceTree = "<group>"; };
 		A57A8B8A2C2FE632000F7394 /* CalendarEventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarEventListView.swift; sourceTree = "<group>"; };
 		A57A8B8C2C2FE637000F7394 /* CalendarEventListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarEventListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,7 +128,7 @@
 				210739FF2C2FE45400DA7A83 /* Room.usdz */,
 				210739F92C2FD83400DA7A83 /* Swift.usdz */,
 				210739FB2C2FDEAB00DA7A83 /* model_s.usdz */,
-				51C839282C2FEDE4006A0004 /* Cloud_C.usda */,
+				51C8392B2C2FF604006A0004 /* Cloud_C.usdz */,
 				21EA6B0C2C2FA0F6005C7738 /* Info.plist */,
 				21EA6B092C2FA0F6005C7738 /* Preview Content */,
 			);
@@ -294,8 +294,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				21EA6AF32C2FA0B3005C7738 /* Preview Assets.xcassets in Resources */,
+				51C8392D2C2FF604006A0004 /* Cloud_C.usdz in Resources */,
 				21EA6AF02C2FA0B3005C7738 /* Assets.xcassets in Resources */,
-				51C8392A2C2FEDE4006A0004 /* Cloud_C.usda in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,8 +304,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				210739FA2C2FD83400DA7A83 /* Swift.usdz in Resources */,
+				51C8392C2C2FF604006A0004 /* Cloud_C.usdz in Resources */,
 				21EA6B0B2C2FA0F6005C7738 /* Preview Assets.xcassets in Resources */,
-				51C839292C2FEDE4006A0004 /* Cloud_C.usda in Resources */,
 				21EA6B082C2FA0F6005C7738 /* Assets.xcassets in Resources */,
 				210739FC2C2FDEAB00DA7A83 /* model_s.usdz in Resources */,
 				21073A002C2FE45400DA7A83 /* Room.usdz in Resources */,

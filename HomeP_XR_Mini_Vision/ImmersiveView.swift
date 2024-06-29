@@ -52,10 +52,10 @@ struct ImmersiveView: View {
                     planeEntity.addChild(room)
                 }
                 
-                if let room = try? await Entity(named: "Cloud_C") {
-                    room.position = [0.5, 0.5, 0.3]
-                    room.scale = [0.025, 0.025, 0.025]
-                    planeEntity.addChild(room)
+                if let cloud = try? await Entity(named: "Cloud_C") {
+                    cloud.position = [0.5, 0.5, 0.3]
+                    cloud.scale = [0.025, 0.025, 0.025]
+                    planeEntity.addChild(cloud)
                 }
             } update: { content, attachments in
                 // Update the RealityKit content when SwiftUI state changes
