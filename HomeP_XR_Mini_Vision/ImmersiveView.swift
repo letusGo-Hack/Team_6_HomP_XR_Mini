@@ -61,13 +61,7 @@ struct ImmersiveView: View {
                 }
                 
                 Attachment(id: "photoAlbum") {
-                    Button("Album", systemImage: "photo.badge.plus.fill", role: .none) {
-                        isPhotoAlbumPresented.toggle()
-                    }
-                    .sheet(isPresented: $isPhotoAlbumPresented) {
-                        ImagePickerView(viewModel: ImagePickerViewModel())
-                    }
-                        
+                    ImagePickerView(viewModel: ImagePickerViewModel())
                 }
             }
         }
