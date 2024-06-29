@@ -69,11 +69,16 @@ struct ImmersiveView: View {
             }
             
             if let room = try? await Entity(named: "Room") {
-                room.position = [0.65, 0.015, 0.3]
+                room.position = [0.65, 0.02, 0.3]
                 room.scale = [0.03, 0.03, 0.03]
 //                let rotationAngle: Float = .pi / 2  // 90 degrees in radians
 //                room.transform.rotation = simd_quatf(angle: rotationAngle, axis: [0, 1, 0])  // Y-axis rotation
                 planeEntity.addChild(room)
+            }
+            
+            if let attachment = attachments.entity(for: "roomInfo") {
+                attachment.position = [0.85, 0.15, 0.4]
+                planeEntity.addChild(attachment)
             }
         } update: { content, attachments in
             // Update the RealityKit content when SwiftUI state changes
@@ -102,6 +107,10 @@ struct ImmersiveView: View {
             
             Attachment(id: "carinfo") {
                 CarInfo()
+            }
+            
+            Attachment(id: "roomInfo") {
+                RoomInfo()
             }
             
             Attachment(id: "map") {
