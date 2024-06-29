@@ -27,6 +27,7 @@ struct CalendarEventListView: View {
                     .padding(.horizontal)
                     .padding(.vertical, 4)
             }
+            .frame(maxHeight: 350)
         }
         .background(Color.white)
         .onAppear {
