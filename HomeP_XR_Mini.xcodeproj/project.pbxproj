@@ -24,6 +24,8 @@
 		25FECAB02C2FE4430020ECB2 /* ImageAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250363FC2C2FC33100FA795B /* ImageAsset.swift */; };
 		25FECAB12C2FE4480020ECB2 /* PhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250363F82C2FC20A00FA795B /* PhotoService.swift */; };
 		25FECAB22C2FE44E0020ECB2 /* AlbumInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250363FA2C2FC23400FA795B /* AlbumInfo.swift */; };
+		A57A8B842C2FE583000F7394 /* CalendarEventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A8B832C2FE583000F7394 /* CalendarEventListView.swift */; };
+		A57A8B862C2FE588000F7394 /* CalendarEventListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57A8B852C2FE588000F7394 /* CalendarEventListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		250363FE2C2FC48C00FA795B /* ImagePickerRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerRepository.swift; sourceTree = "<group>"; };
 		250364032C2FC97C00FA795B /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		250364052C2FC9B900FA795B /* ImagePickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerViewModel.swift; sourceTree = "<group>"; };
+		A57A8B832C2FE583000F7394 /* CalendarEventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarEventListView.swift; sourceTree = "<group>"; };
+		A57A8B852C2FE588000F7394 /* CalendarEventListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarEventListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,7 @@
 		21EA6AFE2C2FA0F4005C7738 /* HomeP_XR_Mini_Vision */ = {
 			isa = PBXGroup;
 			children = (
+				A57A8B802C2FE567000F7394 /* CalendarView */,
 				250364002C2FC96400FA795B /* ImagePickerView */,
 				256CB0662C2FBB4D00D6A14D /* PhotoService */,
 				21EA6B032C2FA0F4005C7738 /* HomeP_XR_Mini_VisionApp.swift */,
@@ -173,6 +178,31 @@
 				250363FA2C2FC23400FA795B /* AlbumInfo.swift */,
 			);
 			path = PhotoService;
+			sourceTree = "<group>";
+		};
+		A57A8B802C2FE567000F7394 /* CalendarView */ = {
+			isa = PBXGroup;
+			children = (
+				A57A8B822C2FE57B000F7394 /* Model */,
+				A57A8B812C2FE578000F7394 /* View */,
+			);
+			path = CalendarView;
+			sourceTree = "<group>";
+		};
+		A57A8B812C2FE578000F7394 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A57A8B832C2FE583000F7394 /* CalendarEventListView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A57A8B822C2FE57B000F7394 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A57A8B852C2FE588000F7394 /* CalendarEventListViewModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,9 +322,11 @@
 				25FECAB12C2FE4480020ECB2 /* PhotoService.swift in Sources */,
 				25FECAB02C2FE4430020ECB2 /* ImageAsset.swift in Sources */,
 				25FECAAD2C2FE42C0020ECB2 /* ImagePickerView.swift in Sources */,
+				A57A8B862C2FE588000F7394 /* CalendarEventListViewModel.swift in Sources */,
 				25FECAAE2C2FE4370020ECB2 /* ImagePickerViewModel.swift in Sources */,
 				21EA6B062C2FA0F4005C7738 /* ContentView.swift in Sources */,
 				21EA6B042C2FA0F4005C7738 /* HomeP_XR_Mini_VisionApp.swift in Sources */,
+				A57A8B842C2FE583000F7394 /* CalendarEventListView.swift in Sources */,
 				210739F82C2FD27200DA7A83 /* ImmersiveView.swift in Sources */,
 				25FECAAF2C2FE43D0020ECB2 /* ImagePickerRepository.swift in Sources */,
 			);
