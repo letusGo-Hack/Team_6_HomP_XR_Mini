@@ -13,5 +13,6 @@ struct HomeP_XR_Mini_VisionApp: App {
         WindowGroup {
             ContentView()
         }
+        .windowStyle(.volumetric)
     }
 }
