@@ -41,9 +41,15 @@ struct ImmersiveView: View {
                     planeEntity.addChild(swift)
                 }
                 
-                if let swift = try? await Entity(named: "model_s") {
-                    swift.position = [0.2, 0, 0.2]
-                    planeEntity.addChild(swift)
+                if let car = try? await Entity(named: "model_s") {
+                    car.position = [-0.6, 0, 0.3]
+                    planeEntity.addChild(car)
+                }
+                
+                if let room = try? await Entity(named: "Room") {
+                    room.position = [0.5, 0.02, 0.3]
+                    room.scale = [0.025, 0.025, 0.025]
+                    planeEntity.addChild(room)
                 }
             } update: { content, attachments in
                 // Update the RealityKit content when SwiftUI state changes
@@ -58,6 +64,7 @@ struct ImmersiveView: View {
                     }
                     .padding()
                     .glassBackgroundEffect()
+                    .frame(maxWidth: 320, maxHeight: 480)
                 }
                 
                 Attachment(id: "photoAlbum") {
