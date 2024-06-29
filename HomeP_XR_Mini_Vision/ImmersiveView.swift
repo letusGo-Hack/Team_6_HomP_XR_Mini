@@ -46,6 +46,11 @@ struct ImmersiveView: View {
                 planeEntity.addChild(calendarEvents)
             }
             
+            if let reminder = attachments.entity(for: "reminder") {
+                reminder.position = [-0.6, 0.2, -0.4]
+                planeEntity.addChild(reminder)
+            }
+            
             if let car = try? await Entity(named: "model_s") {
                 car.position = [-0.65, 0.015, 0.3]
 //                let rotationAngle: Float = .pi / 4  // 45 degrees in radians
@@ -84,6 +89,10 @@ struct ImmersiveView: View {
             
             Attachment(id: "calendarEvents") {
                 CalendarEventListView()
+            }
+            
+            Attachment(id: "reminder") {
+                ReminderListView()
             }
             
             Attachment(id: "clock") {
