@@ -4,11 +4,11 @@
 
 
 
-<img src="./assets/app_1.png" height=240>
+<img src="./assets/app-1.png" height=240>
 
-<img src="./assets/app_2.png" height=240>
+<img src="./assets/app-2.png" height=240>
 
-<img src="./assets/app_3.png" height=240>
+<img src="./assets/app-3.png" height=240>
 
 Vision Pro를 통해 가상 공간에서 책상 위 작업대를 재현하여 효율적이고 직관적인 작업 환경을 제공합니다, 다양한 도구와 자료를 손쉽게 배치하여 최고의 생산성을 어디서든 경험하세요!
 
@@ -36,20 +36,20 @@ Vision Pro를 통해 가상 공간에서 책상 위 작업대를 재현하여 �
 
 ## 중간 과정
 
-<img src="./assets/process_1.png" height=120>
-<img src="./assets/process_2.png" height=120>
-<img src="./assets/process_3.png" height=120>
-<img src="./assets/process_4.png" height=120>
-<img src="./assets/process_5.png" height=120>
-<img src="./assets/process_6.png" height=120>
-<img src="./assets/process_7.png" height=120>
-<img src="./assets/process_8.jpg" height=120>
-<img src="./assets/process_9.png" height=120>
-<img src="./assets/process_10.png" height=120>
-<img src="./assets/process_11.png" height=120>
-<img src="./assets/process_12.png" height=120>
-<img src="./assets/process_13.png" height=120>
-<img src="./assets/process_14.png" height=120>
-<img src="./assets/process_15.png" height=120>
-<img src="./assets/process_16.png" height=120>
-<img src="./assets/process_17.png" height=120>
+<img src="./assets/process-1.png" height=120>
+<img src="./assets/process-2.png" height=120>
+<img src="./assets/process-3.png" height=120>
+<img src="./assets/process-4.png" height=120>
+<img src="./assets/process-5.png" height=120>
+<img src="./assets/process-6.png" height=120>
+<img src="./assets/process-7.png" height=120>
+<img src="./assets/process-8.jpg" height=120>
+<img src="./assets/process-9.png" height=120>
+<img src="./assets/process-10.png" height=120>
+<img src="./assets/process-11.png" height=120>
+<img src="./assets/process-12.png" height=120>
+<img src="./assets/process-13.png" height=120>
+<img src="./assets/process-14.png" height=120>
+<img src="./assets/process-15.png" height=120>
+<img src="./assets/process-16.png" height=120>
+<img src="./assets/process-17.png" height=120>
