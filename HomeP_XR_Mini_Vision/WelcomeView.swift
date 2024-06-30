@@ -16,7 +16,7 @@ struct WelcomeView: View {
     
     var body: some View {
         VStack {
-            Text("Welcome to Spatial Workspace!")
+            Text("Welcome to Vision Desk !")
                 .font(.largeTitle)
 //            Button("Start") {
 //                showImmersiveSpace = true

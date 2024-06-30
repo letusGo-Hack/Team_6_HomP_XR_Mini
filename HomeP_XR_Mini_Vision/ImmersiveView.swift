@@ -56,29 +56,37 @@ struct ImmersiveView: View {
             }
             
             if let photoAlbum = attachments.entity(for: "photoAlbum") {
-                photoAlbum.position = [1.2, 0.35, -0.45]
+                photoAlbum.position = [1.2, 0.6, -0.45]
+                let rotationAngle: Float = -.pi / 4  // 45 degrees in radians
+                photoAlbum.transform.rotation = simd_quatf(angle: rotationAngle, axis: [0, 1, 0])
                 planeEntity.addChild(photoAlbum)
             }
             
             if let calendarEvents = attachments.entity(for: "calendarEvents") {
-                calendarEvents.position = [-0.9, 0.45, -0.15]
+                calendarEvents.position = [-1, 0.45, -0.15]
+                let rotationAngle: Float = .pi / 4  // 45 degrees in radians
+                calendarEvents.transform.rotation = simd_quatf(angle: rotationAngle, axis: [0, 1, 0])
                 planeEntity.addChild(calendarEvents)
             }
             
             if let reminder = attachments.entity(for: "reminder") {
-                reminder.position = [-0.6, 0.45, -0.25]
+                reminder.position = [-0.75, 0.45, -0.25]
+                let rotationAngle: Float = .pi / 6
+                reminder.transform.rotation = simd_quatf(angle: rotationAngle, axis: [0, 1, 0])
                 planeEntity.addChild(reminder)
             }
             
             if let car = try? await Entity(named: "model_s") {
                 car.position = [-0.65, 0.015, 0.3]
 //                let rotationAngle: Float = .pi / 4  // 45 degrees in radians
-//                car.transform.rotation = simd_quatf(angle: rotationAngle, axis: [1, 0, 0])
+//                car.transform.rotation = simd_quatf(angle: rotationAngle, axis: [0, 1, 0])
                 planeEntity.addChild(car)
             }
             
             if let attachment = attachments.entity(for: "carinfo") {
-                attachment.position = [-0.85, 0.035, 0.4]
+                attachment.position = [-0.9, 0.035, 0.4]
+                let rotationAngle: Float = .pi / 6
+                attachment.transform.rotation = simd_quatf(angle: rotationAngle, axis: [0, 1, 0])
                 planeEntity.addChild(attachment)
             }
             
@@ -92,6 +100,8 @@ struct ImmersiveView: View {
             
             if let attachment = attachments.entity(for: "roomInfo") {
                 attachment.position = [0.85, 0.15, 0.4]
+                let rotationAngle: Float = -.pi / 6
+                attachment.transform.rotation = simd_quatf(angle: rotationAngle, axis: [0, 1, 0])
                 planeEntity.addChild(attachment)
             }
         } update: { content, attachments in
