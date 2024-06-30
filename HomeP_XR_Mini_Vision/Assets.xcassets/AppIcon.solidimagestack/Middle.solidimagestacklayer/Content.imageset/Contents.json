@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "AppIcon_dock.png",
       "idiom" : "vision",
       "scale" : "2x"
     }

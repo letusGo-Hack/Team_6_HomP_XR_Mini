@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "AppIcon_bg.png",
       "idiom" : "vision",
       "scale" : "2x"
     }
