@@ -27,10 +27,16 @@ Vision Pro를 통해 가상 공간에서 책상 위 작업대를 재현하여 �
 ## Tech Stack
 
 - visionOS
-- RealityKit, ARKit, plane detection (horizontal, table)
-- RoomPlan [Sample app](https://developer.apple.com/documentation/roomplan/create_a_3d_model_of_an_interior_room_by_guiding_the_user_through_an_ar_experience)
+- RealityKit, ARKit, plane detection (horizontal, table), RoomPlan
 - Reality Composer Pro, Reality Converter, Blender
 - EventKit, PhotoKit, MapKit
+
+
+
+## Reference
+
+- RoomPlan Sample App - [Link](https://developer.apple.com/documentation/roomplan/create_a_3d_model_of_an_interior_room_by_guiding_the_user_through_an_ar_experience)
+- Model S 3D model - [Link](https://github.com/teslamotors/light-show)
 
 
 
